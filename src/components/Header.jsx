@@ -1,32 +1,24 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
+import icraecct from "../assets/icraecct.png";
+import naaclogo from "../assets/naaclogo.jpg";
 
 const menuItems = [
-  { label: "HOME", href: "#home" },
+  { label: "HOME", href: "/" },
+  { label: "ABOUT CONFERENCE", href: "/about" },
+  { label: "SPEAKERS", href: "/speakers" },
   {
-    label: "COMMITTEES",
-    href: "#committees",
+    label: "COMMITTEES", 
+    href: "/advisory-committee",
     hasDropdown: true,
-    subItems: ["Technical", "Organizing", "Advisory"],
+    subItems: ["steering committee", "advisory committee", " technical program committee"],
   },
-  {
-    label: "AUTHORS",
-    href: "#authors",
-    hasDropdown: true,
-    subItems: ["Call for Papers", "Guidelines", "Templates"],
-  },
-  {
-    label: "PROGRAMS",
-    href: "#programs",
-    hasDropdown: true,
-    subItems: ["Keynotes", "Schedule", "Workshops"],
-  },
-  { label: "AWARDS", href: "#awards" },
-  { label: "REGISTRATION", href: "#registration" },
-  { label: "SPONSORSHIP", href: "#sponsorship" },
-  { label: "IN & AROUND GOA", href: "#goa" },
-  { label: "STAY", href: "#stay" },
+  { label: "CONTACT", href: "/contact" },
+  { label: "IMPORTANT DATES", href: "/important-dates" },
+  { label: "SUBMISSION GUIDELINES", href: "/submission-guidelines" },
+  { label: "PUBLICATION", href: "/publication" },
+  { label: "IN AND AROUND KANPUR", href: "/kanpur" },
 ];
 
 export default function Header() {
@@ -43,29 +35,42 @@ export default function Header() {
       <header className="shadow w-full z-40 bg-white">
         <nav className="border-gray-200 px-4 lg:px-6 py-2.5 flex justify-between items-center">
           <div className="flex justify-between items-center mx-auto max-w-screen-xl">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center ">
               <img
                 src="https://csjmu.ac.in//wp-content/themes/csjmutheme/imgs-copyrighted/csjmu-logo-main.png"
-                className="mr-3 h-12"
+                className="mr-3 h-20"
+                alt="Logo"
+              />
+            </Link>
+            <Link to="/" className="flex items-center">
+              <img
+                src={icraecct}
+                className="mr-3 h-20"
+                alt="Logo"
+              />
+            </Link>
+            <div className="text-center space-y-1">
+              <h2 className="text-xl md:text-2xl font-bold text-black">
+                Chhatrapati Shahu Ji Maharaj University, Kanpur
+              </h2>
+              <p className="text-sm md:text-base text-gray-600 italic">
+                Uttar Pradesh State University (Formerly Kanpur University, Kanpur)
+              </p>
+              <span className="inline-block bg-red-700 text-white text-xs font-bold px-3 py-1 rounded">
+                UGC Category - I
+              </span>
+            </div>
+
+            <Link to="/" className="flex items-center">
+              <img
+                src={naaclogo}
+                className="mr-3 h-20"
                 alt="Logo"
               />
             </Link>
 
             {/* Desktop buttons */}
-            <div className="hidden lg:flex items-center lg:order-2 space-x-2">
-              <Link
-                to="#"
-                className="text-gray-800 hover:bg-gray-50 font-medium rounded-lg text-sm px-4 py-2"
-              >
-                Log in
-              </Link>
-              <Link
-                to="#"
-                className="text-white bg-orange-700 hover:bg-orange-800 font-medium rounded-lg text-sm px-4 py-2"
-              >
-                Get started
-              </Link>
-            </div>
+            
 
             {/* Mobile hamburger */}
             <div className="lg:hidden flex items-center">
@@ -88,7 +93,7 @@ export default function Header() {
             {/* Desktop navbar */}
             <div className="hidden lg:flex justify-center items-center h-[50px] space-x-6">
               {menuItems.map((item, index) => (
-                <div key={index} className="relative group cursor-pointer">
+                <div key={index} className="relative group cursor-pointer ">
                   {/* Menu item */}
                   <div className="flex items-center gap-1 hover:text-yellow-300">
                     <a href={item.href}>{item.label}</a>
@@ -101,7 +106,7 @@ export default function Header() {
                       {item.subItems.map((subItem, subIndex) => (
                         <a
                           key={subIndex}
-                          href="#"
+                          href={subItem.trim().toLowerCase().replace(/\s+/g, "-")}
                           className=" px-4 py-2 text-sm hover:text-yellow-300"
                         >
                           {subItem}

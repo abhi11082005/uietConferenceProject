@@ -11,8 +11,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="w-full relative overflow-hidden">
-      <div className="relative mx-auto max-w-screen-xl px-4 py-6 lg:py-8">
+    <footer className="w-full relative overflow-hidden mt-[55px] ">
+      <div className="relative mx-auto max-w-screen-2xl px-4 py-6 lg:py-8">
         <video
           autoPlay
           loop
@@ -28,7 +28,7 @@ export default function Footer() {
         </video>
 
         {/* Overlay Content */}
-        <div className="relative z-10 h-full w-full bg-black/60 px-8 py-6 flex flex-col justify-between">
+        <div className="relative z-10 h-full w-full bg-black/60 px-8 py-6 flex flex-col justify-between rounded-lg">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             {/* Column 1 */}
             <div className="flex flex-col items-center md:items-start text-[#FEFBFB] text-center md:text-left">
@@ -69,7 +69,9 @@ export default function Footer() {
                   {item}
                 </a>
               ))}
+              
             </div>
+            
 
             {/* Column 3 */}
             <div className="flex flex-col items-center md:items-start">

@@ -12,8 +12,11 @@ const Github = () => {
     }, [])
     
   return (<>
-    <div>hello:{data.followers}</div>
-    <img src='data.avatar_url' alt='get Picture'></img>
+    <div className="mx-auto w-full max-w-7xl">
+       <div className="bg-white py-10  text-center text-black border-b shadow-sm rounded-lg">
+        
+       </div>
+    </div>
     </>
   )
 }
