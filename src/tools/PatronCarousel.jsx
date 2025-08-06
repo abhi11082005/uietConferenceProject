@@ -39,7 +39,7 @@ const patrons = [
 
 export default function PatronCarousel() {
   return (
-    <div className="w-full py-10 px-4 bg- rounded-2xl">
+    <div className="w-full py-10 px-4 bg- rounded-2xl border border-gray-200 shadow-lg">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={30}
@@ -54,7 +54,7 @@ export default function PatronCarousel() {
       >
         {patrons.map((p, idx) => (
           <SwiperSlide key={idx}>
-            <div className="bg-white  bg-opacity-10 backdrop-blur-md rounded-2xl p-6 text-center text-white shadow-lg">
+            <div className="bg-white  bg-opacity-10 backdrop-blur-md rounded-2xl p-6 text-center text-black shadow-lg">
               <img
                 src={p.image}
                 alt={p.name}

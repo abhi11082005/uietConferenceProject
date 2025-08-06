@@ -8,7 +8,7 @@ import PatronCarousel from '../tools/PatronCarousel';
 
 export default function Home() {
     return (<>
-        <div className="mx-auto w-full max-w-7xl mt-5">
+        <div className="mx-auto w-full  ">
             <HeroSection />
             <PatronCarousel />
             <AboutConference />

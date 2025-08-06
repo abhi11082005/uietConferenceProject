@@ -2,6 +2,7 @@ import romanialogo from "../assets/romanialogo.jpg";
 import aradlogo from "../assets/aradlogo.png";
 import fresnillologo from "../assets/fresnillologo.jpg";
 import icraecct from "../assets/icraecct.png";
+import uietimage from "../assets/uietimage.jpg";
 
 export default function HeroSection() {
   return (
@@ -11,19 +12,12 @@ export default function HeroSection() {
 
      <div className="relative w-full h-screen overflow-hidden text-white">
       {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source
-          src="https://res.cloudinary.com/djasn9mmy/video/upload/samples/elephants.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+      <img
+  src={uietimage}
+  alt="Background"
+  className="absolute inset-0 w-full h-full object-cover z-0"
+/>
+
 
       {/* Overlay Text */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 bg-gradient-to-r from-red-600 to-indigo-500 bg-clip-text text-transparent

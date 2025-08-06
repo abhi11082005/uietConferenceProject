@@ -86,7 +86,7 @@ export default function Header() {
       </header>
 
       {/* Sticky red nav */}
-      <nav className="sticky top-0 z-50 bg-[#C21717] text-[#FEFBFB] font-bold text-sm uppercase tracking-wide">
+      <nav className="sticky top-0 z-50 bg-[#1B305C] text-[#FEFBFB] font-bold text-sm uppercase tracking-wide">
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Desktop navbar */}
           
@@ -102,7 +102,7 @@ export default function Header() {
             
                   {/* Desktop dropdown - fixed part */}
                   {item.hasDropdown && (
-                    <div className="absolute left-0 top-full mt-1 hidden group-hover:flex flex-col bg-[#C21717] text-white rounded shadow-lg z-50 min-w-[200px]">
+                    <div className="absolute left-0 top-full mt-1 hidden group-hover:flex flex-col bg-[#1B305C] text-white rounded shadow-lg z-50 min-w-[200px]">
                       {item.subItems.map((subItem, subIndex) => (
                         <a
                           key={subIndex}
